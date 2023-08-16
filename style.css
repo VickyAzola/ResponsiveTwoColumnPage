@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+nav,
+h1,
+h2,
+h3, 
+button, 
+a {
+    font-family: 'Raleway', sans-serif;
+}
+
+p,
+span,
+li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bg-imagen {
+    background-image: linear-gradient(#f8f8feff, hsl(0, 0%, 100%));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+

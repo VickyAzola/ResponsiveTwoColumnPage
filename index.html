@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+  <header class="flex justify-between items-center p-6 md:p-10 lg:px-14 gap-x-2">
+    <img class="w-20 md:w-28" src="images/logo.svg" alt=""/>
+    <nav>
+      <ul class="flex items-center gap-x-6 text-xs md:text-sm">
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="p-6 md:p-10 lg:px-14 text-center mb-28 md:grid md:grid-cols-2 md:items-center md:gap-x-10 lg:gap-x-16">
+      <img class="mt-8 md:order-last" src="images/illustration-1.svg" alt=""/>
+
+    <div>
+      <section class="md:text-left">
+        <h1 class="font-bold text-2xl md:text-4xl my-5">
+          All your files in one secure location, accessible anywhere.
+        </h1>
+        <p class="my-4 md:my-8">
+          Fylo stores your most important files in one secure location. 
+          Access them wherever you need, share and collaborate with friends, 
+          family, and co-workers.
+        </p>
+      </section>
+
+      <section>
+        <form id="form_1" name="form_1" onsubmit="return validForm_1(event)" required 
+            class="flex flex-col gap-y-3 mx-2 md:mx-0 md:flex-row md:gap-x-2 md:w-full">
+          <div>
+            <label for="email_1"></label>
+            <input id="email_1" type="email" name="email_1" aria-label="Enter your email and get started" placeholder="Enter your email..." 
+            class="md:w-60 lg:w-80 border border-slate-500 rounded p-3  text-xs w-full">
+            <p id="errorMessage_1" class="text-[#FF5263] text-xs mt-1 md:text-left"></p>
+          </div>
+          <button type="submit" class="md:min-w-[6rem] md:w-40 lg:w-48 md:h-[2.6rem] md:px-2 md:text-sm hover:bg-[#7c9efc] bg-[#3065f8] text-white rounded py-2 shadow-md" >
+            Get Started
+          </button>
+        </form>
+      </section>
+    </div>
+    </article>
+
+    <div class="relative">
+      <img class="absolute top-[-3rem] w-full h-20 md:hidden" src="images/bg-curve-mobile.svg" alt="">
+      <img class="absolute top-[-4rem] w-full h-20 hidden md:block" src="images/bg-curve-desktop.svg" alt="">
+    </div>
+
+    <article class="bg-imagen p-6 md:p-10 lg:px-14 md:grid md:grid-cols-2 md:items-center md:gap-x-14 lg:gap-x-20">
+      <img class="md:order-last mt-14" src="images/illustration-2.svg" alt=""/>
+      
+    <div>
+      <section class="my-8">
+        <h2 class="md:text-2xl lg:text-4xl lg:mb-8 md:text-left font-bold text-base text-center mb-5 pt-8">Stay productive, wherever you are</h2>
+        <p class="text-gray-500 mb-5 lg:mr-14">Never let location be an issue when accessing your files. Fylo has you 
+          covered for all of your file storage needs.</p>
+        <p class="text-gray-500 lg:mr-20">Securely share files and folders with friends, family and colleagues for 
+          live collaboration. No email attachments required!</p>
+      </section>
+
+      <section>
+        <div class="w-[8.7rem] h-6 mx-auto md:mx-0 border-b-2 border-[#3c9f8f] hover:border-[#72cfc0] md:ml-2">
+          <a href="#" class="flex items-center gap-x-2 text-[#3c9f8f] hover:text-[#72cfc0] text-xs">
+            See how Fylo works
+            <img class="w-5 h-5 hover:fill-[#72cfc0]" src="images/icon-arrow.svg" alt="" />
+          </a>
+        </div>
+
+        <div class="mt-10 mb-12 mx-5 md:mx-0 md:max-w-[16rem] lg:max-w-[18rem] bg-white rounded-md p-6 text-xs shadow-[0_0_25px_-10px_rgba(0,0,0,0.2)]">
+          <img src="images/icon-quotes.svg" alt="">
+          <p class="py-2">Fylo has improved our team productivity by an order of magnitude. Since 
+            making the switch our team has become a well-oiled collaboration machine.
+          </p>
+          <div class="flex gap-x-2 items-center">
+            <img class="rounded-full w-7 h-7" src="images/avatar-testimonial.jpg" alt="Photo of Kyle Burton"/>
+            <div class="">
+              <span class="font-bold">Kyle Burton</span>
+              <p class="text-[.6rem]">Founder & CEO, Huddle</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </article>
+
+    <section class="bg-[#585989] p-10 lg:px-14 text-center md:text-left text-white md:grid md:grid-cols-2 md:gap-x-12">
+      <div>
+        <h3 class="text-lg font-bold mb-4">Get early access today</h3>
+        <p>It only takes a minute to sign up and our free starter tier is extremely generous. 
+          If you have any questions, our support team would be happy to help you.
+        </p>
+      </div>
+      <form id="form_2" name="form_2" onsubmit="return validForm_2(event)" required 
+        class="flex flex-col gap-y-2 mx-6 py-4">
+        <div>
+          <label for="email_2"></label>
+          <input id="email_2" type="email" name="email_2" aria-label="Enter your email and get early access today" placeholder="email@example.com" 
+          class="border border-slate-500 rounded p-3 text-xs w-full">
+          <p id="errorMessage_2" class="text-white text-xs mt-1 md:text-left"></p>
+        </div>
+        <button type="submit" class="md:w-40 md:h-[2.6rem] md:px-2 md:text-sm hover:bg-[#7c9efc] bg-[#3065f8] text-xs text-white rounded py-3 shadow-md">
+          Get Started For Free</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="p-6 md:p-10 lg:px-14 bg-[#070439] text-white text-sm md:text-base">
+    <img class="w-32" src="images/LOGO-BLANCO.svg" alt=""/>
+
+  <div class="md:grid md:grid-cols-6 md:gap-x-10">
+    
+    <section class="py-6 md:py-8 md:col-span-2 col-start-1">
+        <div class="flex gap-x-3 items-center md:pb-1">
+          <img class="w-3 h-3" src="images/icon-phone.svg" alt=""/>
+          <p>Phone: +1-543-123-4567</p>
+        </div>
+        <div class="flex gap-x-3 items-center">
+          <img class="w-4 h-3" src="images/icon-email.svg" alt=""/>
+          <p>example@fylo.com</p>
+        </div>
+    </section>
+
+    <section class="py-8 grid gap-y-9 md:col-span-1 md:col-start-3">
+      <ul class="grid gap-y-3">
+        <li><a href="#" class="hover:text-[#7c9efc]">About Us</a></li>
+        <li><a href="#" class="hover:text-[#7c9efc]">Jobs</a></li>
+        <li><a href="#" class="hover:text-[#7c9efc]">Press</a></li>
+        <li><a href="#" class="hover:text-[#7c9efc]">Blog</a></li>
+      </ul>
+    </section>
+
+    <section class="py-8 grid gap-y-9 md:col-span-1">
+      <ul class="grid gap-y-3">
+        <li><a href="#" class="hover:text-[#7c9efc]">Contact Us</a></li>
+        <li><a href="#" class="hover:text-[#7c9efc]">Terms</a></li>
+        <li><a href="#" class="hover:text-[#7c9efc]">Privacy</a></li>
+      </ul>
+    </section>
+
+    <section class="md:col-span-2 md:col-start-5 md:pt-8 flex gap-x-2 justify-center md:justify-left pb-4">
+      <a href="https://es-la.facebook.com/" target="_blank" aria-label="Go to Facebook"
+        class="flex items-center justify-center bg-transparent border border-white aspect-square rounded-full w-7 h-7 hover:bg-[#1877f2]">
+        <img class="w-4 h-4" src="images/facebook.svg" alt="">
+      </a>
+      <a href="https://twitter.com/?lang=es" target="_blank" aria-label="Go to Twitter"  
+        class="flex items-center justify-center bg-transparent border border-white aspect-square rounded-full w-7 h-7 hover:bg-[#7c9efc]">
+        <img class="w-4 h-4" src="images/twitter.svg" alt="">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Go to Instagram"  
+        class="flex items-center justify-center bg-transparent border border-white aspect-square rounded-full w-7 h-7 hover:bg-[#fe277d]">
+        <img class="w-4 h-4" src="images/instagram.svg" alt="">
+      </a>
+    </section>
+  </div>
+
+  <p class="text-xs text-white text-center md:mt-4">
+    Challenge by <a class="font-bold hover:text-[#7c9efc]" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="font-bold hover:text-[#7c9efc]" href="https://github.com/VickyAzola/ResponsiveTwoColumnPage" target="_blank">Victoria Azola</a>.
+  </p>
+
+  </footer>
+</body>
+<script src="index.js"></script>
+</html>
